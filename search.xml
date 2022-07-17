@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Linux 下将 zsh 设置为默认终端</title>
+    <url>/2022/07/16/Linux-%E4%B8%8B%E5%B0%86-zsh-%E8%AE%BE%E7%BD%AE%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/</url>
+    <content><![CDATA[<h2 id="install-zsh"><a href="#install-zsh" class="headerlink" title="install zsh"></a>install zsh</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">zsh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="setting-defualt-shell"><a href="#setting-defualt-shell" class="headerlink" title="setting defualt shell"></a>setting defualt shell</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> chsh -s <span class="token variable"><span class="token variable">$(</span><span class="token function">which</span> <span class="token function">zsh</span><span class="token variable">)</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>这里设置完之后需要注销当前用户然后重新登录</p>
+</blockquote>
+<h2 id="check-defualt-shell"><a href="#check-defualt-shell" class="headerlink" title="check defualt shell"></a>check defualt shell</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token environment constant">$SHELL</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>输出为 &#x2F;bin&#x2F;zsh 或者 &#x2F;usr&#x2F;bin&#x2F;zsh 则表示当前默认 shell 是 zsh</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 环境变量设置</title>
+    <url>/2022/07/16/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="Linux-环境下设置环境变量"><a href="#Linux-环境下设置环境变量" class="headerlink" title="Linux 环境下设置环境变量"></a>Linux 环境下设置环境变量</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">echo</span> <span class="token string">'export PATH=/opt/node@16/bin:$PATH'</span> <span class="token operator">>></span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>引号部分解释如下:</p>
+<p>export PATH&#x3D;&lt;可执行文件路径&gt;:$PATH</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows CMD 乱码问题解决方法</title>
+    <url>/2022/06/30/Windows-CMD-%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>以管理员身份运行 <code>CMD</code></p>
+<p>输入如下命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">reg <span class="token function">add</span> <span class="token string">"hklm\SOFTWARE\Microsoft\Command Processor"</span> /v autorun /d <span class="token string">"chcp 65001"</span> /f<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 重装后的配置</title>
+    <url>/2022/07/17/Windows-%E9%87%8D%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
+<li>前往 Microsoft Store 更新所有应用</li>
+<li>前往 Microsoft Store 下载 <code>Windows Terminal</code></li>
+<li>下载并安装 <a href="https://wwi.lanzoup.com/iAYdJ07y3y9i">Clash for Windows</a></li>
+<li>添加 Clash 订阅并开启代理，测试代理是否成功 (重要)</li>
+<li><strong>如果上面的步骤有任何一个看不懂, 请关掉这个页面</strong></li>
+</ol>
+<h2 id="常用软件安装"><a href="#常用软件安装" class="headerlink" title="常用软件安装"></a>常用软件安装</h2><p>以 <strong>管理员身份</strong> 运行 <code>Windows Terminal</code></p>
+<p>输入 <code>Set-ExecutionPolicy RemoteSigned # 允许 Shell 执行脚本</code></p>
+<h3 id="UTools"><a href="#UTools" class="headerlink" title="UTools"></a>UTools</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> Yuanli.uTools -l d:<span class="token punctuation">\</span>UTools -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Goole-Chrome"><a href="#Goole-Chrome" class="headerlink" title="Goole Chrome"></a>Goole Chrome</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> Google.Chrome -l d:<span class="token punctuation">\</span>Chrome -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Visual-Studio-Code"><a href="#Visual-Studio-Code" class="headerlink" title="Visual Studio Code"></a>Visual Studio Code</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget  <span class="token function">install</span> Microsoft.VisualStudioCode -l d:<span class="token punctuation">\</span>VSCode -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="腾讯-QQ"><a href="#腾讯-QQ" class="headerlink" title="腾讯 QQ"></a>腾讯 QQ</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> Tencent.QQ -l d:<span class="token punctuation">\</span>QQ -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> Tencent.WeChat -l d:<span class="token punctuation">\</span>WeChat -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> NetEase.CloudMusic -l d:<span class="token punctuation">\</span>NeteaseMusic -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="IntelliJ-IDEA"><a href="#IntelliJ-IDEA" class="headerlink" title="IntelliJ IDEA"></a>IntelliJ IDEA</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> JetBrains.IntelliJIDEA.Ultimate -l d:<span class="token punctuation">\</span>IDEA -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="PyCharm"><a href="#PyCharm" class="headerlink" title="PyCharm"></a>PyCharm</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> JetBrains.PyCharm.Professional -l d:<span class="token punctuation">\</span>PyCharm -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="WebStorm"><a href="#WebStorm" class="headerlink" title="WebStorm"></a>WebStorm</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> JetBrains.WebStorm -l d:<span class="token punctuation">\</span>WebStorm -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="NodeJS"><a href="#NodeJS" class="headerlink" title="NodeJS"></a>NodeJS</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> OpenJS.NodeJS.LTS -l d:<span class="token punctuation">\</span>NodeJS -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> Git.Git -l d:<span class="token punctuation">\</span>Git -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p>补充: Git 配置</p>
+<p>git config –global user.name codedog999</p>
+<p>git config –global user.email <a href="mailto:&#x63;&#111;&#x64;&#x65;&#x64;&#111;&#x67;&#57;&#x39;&#57;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;">&#x63;&#111;&#x64;&#x65;&#x64;&#111;&#x67;&#57;&#x39;&#57;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;</a></p>
+</blockquote>
+<h3 id="Python3"><a href="#Python3" class="headerlink" title="Python3"></a>Python3</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> Python.Python.3 -l d:<span class="token punctuation">\</span>Python3 -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="JDK11"><a href="#JDK11" class="headerlink" title="JDK11"></a>JDK11</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> ojdkbuild.openjdk.11.jdk -l d:<span class="token punctuation">\</span>jdk<span class="token punctuation">\</span><span class="token number">11</span> -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">winget <span class="token function">install</span> vim.vim -l d:<span class="token punctuation">\</span>Vim -h<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="补充自用"><a href="#补充自用" class="headerlink" title="补充自用"></a>补充自用</h2><h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">corepack <span class="token builtin class-name">enable</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">yarn</span> <span class="token builtin class-name">set</span> version stable <span class="token comment"># 将 yarn 升级到最新版</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="油猴脚本"><a href="#油猴脚本" class="headerlink" title="油猴脚本"></a>油猴脚本</h2><ul>
+<li><p><a href="https://greasyfork.org/zh-CN/scripts/378351">CSDN 净化</a></p>
+</li>
+<li><p><a href="https://greasyfork.org/zh-CN/scripts/419081">知乎净化</a></p>
+</li>
+<li><p><a href="https://greasyfork.org/zh-CN/scripts/412680">吾爱破解自动签到</a></p>
+</li>
+<li><p><a href="https://greasyfork.org/zh-CN/scripts/424246">V2EX 增强</a></p>
+</li>
+<li><p><a href="https://greasyfork.org/zh-CN/scripts/400250">Discuz 论坛增强</a></p>
+</li>
+<li><p><a href="https://greasyfork.org/zh-CN/scripts/444498">百度文库增强</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为 Git Bash设置终端代理</title>
+    <url>/2022/06/28/%E4%B8%BA-Git-Bash%E8%AE%BE%E7%BD%AE%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</url>
+    <content><![CDATA[<p>打开 <code>Git Bash</code></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">http_proxy</span><span class="token operator">=</span>http://127.0.0.1:7890
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">https_proxy</span><span class="token operator">=</span>http://127.0.0.1:7890<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用 Hexo 和 GitHub Actions 实现自动部署博客</title>
+    <url>/2022/06/01/%E4%BD%BF%E7%94%A8Hexo-%E5%92%8C-GitHub-Actions-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="本地-Hexo-环境搭建"><a href="#本地-Hexo-环境搭建" class="headerlink" title="本地 Hexo 环境搭建"></a>本地 Hexo 环境搭建</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~ <span class="token operator">&amp;&amp;</span> hexo init Blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> Blog <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>本地预览</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<p>运行完上面的命令之后, 访问 <a href="http://localhost:4000/">http://localhost:4000</a></p>
+<h1 id="GitHub-新建源码仓库"><a href="#GitHub-新建源码仓库" class="headerlink" title="GitHub 新建源码仓库"></a>GitHub 新建源码仓库</h1><p><img src="https://blog-1306835250.cos.ap-chengdu.myqcloud.com/202206010936481.png"></p>
+<h1 id="GitHub-新建博客页面文件仓库"><a href="#GitHub-新建博客页面文件仓库" class="headerlink" title="GitHub 新建博客页面文件仓库"></a>GitHub 新建博客页面文件仓库</h1><p><strong>仓库名称必须是: &lt;GitHub 用户名&gt;.github.io</strong></p>
+<p><strong>必须设置为公开权限</strong></p>
+<p><img src="https://blog-1306835250.cos.ap-chengdu.myqcloud.com/202206010935116.png"></p>
+<h1 id="修改本地-Hexo-配置"><a href="#修改本地-Hexo-配置" class="headerlink" title="修改本地 Hexo 配置"></a>修改本地 Hexo 配置</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/Blog/_config.yml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/DroidWang/DroidWang.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://blog-1306835250.cos.ap-chengdu.myqcloud.com/202206010936733.png"></p>
+<p>安装部署插件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>发布到 GitHub 页面仓库</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://blog-1306835250.cos.ap-chengdu.myqcloud.com/202206010936694.png"></p>
+<blockquote>
+<p>此处的密码是 GitHub 账户的 Access Token</p>
+<p>创建 Token 方法: GitHub 主页右上角点击头像 -&gt; Settings -&gt; Devolepoer Settings -&gt; Personal Access Tokens -&gt; Generate new token (注意勾选 repo + workflow)</p>
+</blockquote>
+<p>刷新刚刚创建的用来存放页面的仓库就能看见有东西了</p>
+<h1 id="使用-GitHub-Actions"><a href="#使用-GitHub-Actions" class="headerlink" title="使用 GitHub Actions"></a>使用 GitHub Actions</h1><p><img src="https://blog-1306835250.cos.ap-chengdu.myqcloud.com/202206010936460.png"></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> ~/Blog/.github/workflows <span class="token operator">&amp;&amp;</span> <span class="token function">vim</span> ~/Blog/.github/workflows/hexo-deploy.yml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>删除所有内容并粘贴如下内容</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Hexo Deploy GitHub Pages
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token comment"># 源码仓库提交分支</span>
+      <span class="token punctuation">-</span> master
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build-and-deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@master
+
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build and Deploy
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> theme<span class="token punctuation">-</span>keep/hexo<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>github<span class="token punctuation">-</span>pages<span class="token punctuation">-</span>action@master
+      <span class="token key atrule">env</span><span class="token punctuation">:</span>
+        <span class="token key atrule">PERSONAL_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GITHUB_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+
+        <span class="token comment"># 静态页面存储仓库</span>
+        <span class="token key atrule">PUBLISH_REPOSITORY</span><span class="token punctuation">:</span> DroidWang/DroidWang.github.io
+        <span class="token comment"># 静态页面仓库的分支</span>
+        <span class="token key atrule">BRANCH</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>修改并核对上面的配置:</p>
+<ol>
+<li><p>查看源码提交分支是否是 <code>master</code></p>
+</li>
+<li><p>修改 <code>$&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</code> 为前面生成的 GitHub Access Token, 例如: <code>PERSONAL_TOKEN: xxxxxxxxxxxxxxxxx</code></p>
+</li>
+<li><p>修改静态页面存储仓库, 格式为: <code>&lt;GitHub 用户名/ 仓库名&gt;</code></p>
+</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~/Blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> origin https://github.com/<span class="token operator">&lt;</span>GitHub 用户名<span class="token operator">></span>/<span class="token operator">&lt;</span>存放源码的仓库名<span class="token operator">></span>.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span> <span class="token operator">&amp;&amp;</span> <span class="token function">git</span> commit -a -m <span class="token string">'first commit'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push --set-upstream origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果最后 <code>git push</code> 失败了, 一般有以下两个原因:</p>
+<ol>
+<li><p>GitHub Access Token 权限不够, 重新生成, 然后重新填写密钥 (必须勾选 repo 和 workflow)</p>
+</li>
+<li><p>GitHub 取消邮箱私密性: GitHub 主页左上角头像 -&gt; Settings -&gt; Emails -&gt; 取消勾选 Keep my email addresses private</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+</search>

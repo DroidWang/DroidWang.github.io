@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>王永思</title>
+  
+  
+  <link href="https://mutou127.top/atom.xml" rel="self"/>
+  
+  <link href="https://mutou127.top/"/>
+  <updated>2022-07-17T15:21:58.017Z</updated>
+  <id>https://mutou127.top/</id>
+  
+  <author>
+    <name>王永思</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 重装后的配置</title>
+    <link href="https://mutou127.top/2022/07/17/Windows-%E9%87%8D%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>https://mutou127.top/2022/07/17/Windows-%E9%87%8D%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/</id>
+    <published>2022-07-17T23:18:24.000Z</published>
+    <updated>2022-07-17T15:21:58.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;前往 Microsoft Store 更新所有应用&lt;/li&gt;
+&lt;li&gt;前往 Microsoft Store</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 下将 zsh 设置为默认终端</title>
+    <link href="https://mutou127.top/2022/07/16/Linux-%E4%B8%8B%E5%B0%86-zsh-%E8%AE%BE%E7%BD%AE%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/"/>
+    <id>https://mutou127.top/2022/07/16/Linux-%E4%B8%8B%E5%B0%86-zsh-%E8%AE%BE%E7%BD%AE%E4%B8%BA%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/</id>
+    <published>2022-07-16T22:54:46.000Z</published>
+    <updated>2022-07-17T15:21:58.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;install-zsh&quot;&gt;&lt;a href=&quot;#install-zsh&quot; class=&quot;headerlink&quot; title=&quot;install zsh&quot;&gt;&lt;/a&gt;install zsh&lt;/h2&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mutou127.top/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://mutou127.top/tags/Linux/"/>
+    
+    <category term="折腾" scheme="https://mutou127.top/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 环境变量设置</title>
+    <link href="https://mutou127.top/2022/07/16/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://mutou127.top/2022/07/16/Linux-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/</id>
+    <published>2022-07-16T18:41:22.000Z</published>
+    <updated>2022-07-17T15:21:58.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Linux-环境下设置环境变量&quot;&gt;&lt;a href=&quot;#Linux-环境下设置环境变量&quot; class=&quot;headerlink&quot; title=&quot;Linux 环境下设置环境变量&quot;&gt;&lt;/a&gt;Linux 环境下设置环境变量&lt;/h2&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://mutou127.top/categories/Linux/"/>
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows CMD 乱码问题解决方法</title>
+    <link href="https://mutou127.top/2022/06/30/Windows-CMD-%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://mutou127.top/2022/06/30/Windows-CMD-%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+    <published>2022-06-30T11:41:33.000Z</published>
+    <updated>2022-07-17T15:21:58.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以管理员身份运行 &lt;code&gt;CMD&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;输入如下命令&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;reg</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为 Git Bash设置终端代理</title>
+    <link href="https://mutou127.top/2022/06/28/%E4%B8%BA-Git-Bash%E8%AE%BE%E7%BD%AE%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/"/>
+    <id>https://mutou127.top/2022/06/28/%E4%B8%BA-Git-Bash%E8%AE%BE%E7%BD%AE%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86/</id>
+    <published>2022-06-28T08:18:39.000Z</published>
+    <updated>2022-07-17T15:21:58.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;打开 &lt;code&gt;Git Bash&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot; data-language=&quot;bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Hexo 和 GitHub Actions 实现自动部署博客</title>
+    <link href="https://mutou127.top/2022/06/01/%E4%BD%BF%E7%94%A8Hexo-%E5%92%8C-GitHub-Actions-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://mutou127.top/2022/06/01/%E4%BD%BF%E7%94%A8Hexo-%E5%92%8C-GitHub-Actions-%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</id>
+    <published>2022-06-01T09:39:15.000Z</published>
+    <updated>2022-07-17T15:21:58.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;本地-Hexo-环境搭建&quot;&gt;&lt;a href=&quot;#本地-Hexo-环境搭建&quot; class=&quot;headerlink&quot; title=&quot;本地 Hexo 环境搭建&quot;&gt;&lt;/a&gt;本地 Hexo 环境搭建&lt;/h1&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+    <category term="折腾" scheme="https://mutou127.top/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+</feed>
